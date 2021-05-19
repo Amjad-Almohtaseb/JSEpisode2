@@ -40,8 +40,9 @@ function pairs(names) {
   if (names===[]||(!names)) return [] ;
   let newPairs=[] ;
   let i =0
-  while(i<names.length/2)
-  newPairs.push([names.getRandom(),names.getRandom()]);
+  while(i<parseInt(names.length/2))newPairs.push([names.getRandom(),names.getRandom()]);
+  if (!Number.isInteger(names.length/2))newPairs.push([names.getRandom()]);
+  return newPairs ;
 
   
 
@@ -50,5 +51,5 @@ function pairs(names) {
 module.exports = pairs;
 
 console.log(
-  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz", "Mr Potato"])
+  pairs(["Asis", "Hamsa", "Fawas", "Mishmish", "Hussein", "Lailz",'amjad'])
 );
