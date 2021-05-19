@@ -40,8 +40,7 @@ function pairs(names) {
   if (names===[]||(!names)) return [] ;
   let newPairs=[] ;
   let i =0
-  while(i<parseInt(names.length/2))newPairs.push([names.getRandom(),names.getRandom()]);
-  if (!Number.isInteger(names.length/2))newPairs.push([names.getRandom()]);
+  while(i<Math.round(names.length/2))newPairs.push([names.getRandom(),names.getRandom()]);
   return newPairs ;
 
   
