@@ -38,7 +38,13 @@ Array.prototype.getRandom = function () {
 
 function pairs(names) {
   if (names===[]||(!names)) return [] ;
-  let newPairs=[]
+  let newPairs=[] ;
+  let i =0
+  while(i<names.length/2)
+  newPairs.push([names.getRandom(),names.getRandom()]);
+
+  
+
 }
 
 module.exports = pairs;
